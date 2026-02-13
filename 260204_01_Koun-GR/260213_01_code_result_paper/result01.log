@@ -1,0 +1,7 @@
+>>> RUNNING GOVERNANCE PROOF (v7.0) <<<
+Start A: Merit=3.25e-01
+Mode A: CONVERGED@5 (Res=2.59e-11)
+Start B: Merit=3.25e-01
+Mode B: DT_STAGNATION (Res=8.06e-01)
+Start C: Merit=3.25e-01
+Mode C: MAX_ITER (Res=1.78e-01)
