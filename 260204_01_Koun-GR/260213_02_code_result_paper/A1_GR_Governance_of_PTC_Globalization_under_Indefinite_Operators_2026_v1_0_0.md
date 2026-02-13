@@ -1,4 +1,55 @@
 
+---
+
+論文英文文件名：A1_GR_Governance_of_PTC_Globalization_under_Indefinite_Operators_2026_v1_0_0.md
+
+中文標題：不定算子下偽暫態延拓全域化的治理缺口及其結構修復機制
+英文標題：Governance of Pseudo-Transient Continuation Globalization under Indefinite Operators: Geometric Alignment Audit and Deadlock Resolution via Koun-A1-GR
+
+作者（Author）：Shu Koun
+作者拼音（Pinyin）：Shu Koun
+作者姓名音標（Pronunciation）：/ʃu koʊn/
+通訊作者（Corresponding Author）：Shu Koun
+
+日期（Date）：2026-02-13
+版本（Version）：v1.0.0
+語言（Language）：zh-Hant（主文），en（標題與關鍵欄位）
+
+領域（Fields）：Numerical Methods；Computational Physics；Nonlinear Solvers；Scientific Computing
+
+摘要（Abstract, zh-Hant）：本文研究偽暫態延拓（Pseudo-Transient Continuation, PTC）作為 Newton 方法全域化策略時，在 Jacobian 不定條件下可能出現的幾何治理缺口。本文指出 PTC shift 方向由 $(J+\frac1{dt}I)dx=-F$ 定義時，可能在以 $M=\frac12|F|^2$ 為度量下產生幾何上坡方向，其幾何對齊指標為 $\mathcal{C}*{align}=\frac{\langle g,dx\rangle}{|g||dx|}>0$，即使線性審計指標 $LinErr=\frac{|A(dx)+F|}{|F|}$ 仍極小。於嚴格 dual tolerance 接受條件 $M*{new}\le M_{old}(1+10^{-12})+10^{-15}$ 下，Blind PTC 可能因連續拒絕導致 $dt$ 收縮至下限並形成 dt-stagnation。本文提出 Koun-A1-GR 治理協議，透過幾何審計與救援機制在不更改接受法律與線性求解容忍度之前提下解除死鎖並恢復單調下降。A/B/C 三模式對照實驗顯示 Pure Newton 快速收斂，Blind PTC 出現 dt-stagnation，而 Koun-A1-GR 能解除死鎖並持續推進殘差下降，提供不定算子下 globalization 結構分析與修復的可操作框架。
+
+關鍵詞（Keywords, en）：pseudo-transient continuation；globalization；indefinite operator；Hamiltonian constraint；merit function；geometric alignment；deadlock；solver governance；Koun-A1-GR
+
+關鍵詞（Keywords, zh-Hant）：偽暫態延拓；全域化；不定算子；Hamiltonian constraint；merit function；幾何對齊；死鎖；求解器治理；Koun-A1-GR
+
+分類（Subjects）：65N30；65H10；65F10；35J60
+
+核心術語與符號（Core Terms and Notation）：
+
+1. 殘差：$F(\psi)$
+2. Jacobian：$J(\psi)$
+3. Merit function：$M(\psi)=\frac12|F(\psi)|^2$
+4. 梯度：$g=\nabla M(\psi)$
+5. Newton 候選方向：$Jdx_N=-F$
+6. PTC 候選方向：$(J+\frac1{dt}I)dx_P=-F$
+7. 幾何對齊指標：$\mathcal{C}_{align}=\frac{\langle g,dx\rangle}{|g||dx|}$
+8. 線性審計指標：$LinErr=\frac{|A(dx)+F|}{|F|}$
+9. 嚴格接受法律：$M_{new}\le M_{old}(1+10^{-12})+10^{-15}$
+10. 失效型態：dt-stagnation
+
+程式與可重現性（Code and Reproducibility）：
+參考實作檔名：koun_a1_gr_final.py
+運行模式：Mode A（Pure Newton），Mode B（Blind PTC），Mode C（Koun-A1-GR）
+輸出建議圖表：ResNorm vs Iter；$\mathcal{C}_{align}$ vs Iter；$dt$ vs Iter
+
+授權（License）：All rights reserved by the author unless explicitly stated otherwise.
+
+引用建議（Suggested Citation, en）：Shu Koun. Governance of Pseudo-Transient Continuation Globalization under Indefinite Operators: Geometric Alignment Audit and Deadlock Resolution via Koun-A1-GR. Version v1.0.0, 2026-02-13.
+
+---
+
+
 
 ## 摘要
 
