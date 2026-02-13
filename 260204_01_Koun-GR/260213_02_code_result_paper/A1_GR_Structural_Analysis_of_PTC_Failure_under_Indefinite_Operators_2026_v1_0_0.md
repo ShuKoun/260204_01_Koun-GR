@@ -1,5 +1,52 @@
 
 
+---
+
+
+
+中文標題：不定算子下偽暫態延拓幾何失配機制之結構分析
+英文標題：Structural Analysis of Geometric Misalignment in Pseudo-Transient Continuation under Indefinite Operators
+
+作者（Author）：Shu Koun
+作者拼音（Pinyin）：Shu Koun
+作者姓名音標（Pronunciation）：/ʃu koʊn/
+通訊作者（Corresponding Author）：Shu Koun
+
+日期（Date）：2026-02-13
+版本（Version）：v1.0.0
+語言（Language）：zh-Hant（主文），en（標題與關鍵欄位）
+
+領域（Fields）：Numerical Analysis；Scientific Computing；Nonlinear Solvers；Computational Physics；Applied Linear Algebra
+
+摘要（Abstract, zh-Hant）：本文從線性代數與幾何動力學角度分析偽暫態延拓（Pseudo-Transient Continuation, PTC）作為 Newton 全域化策略時在不定算子下的失效機制。以 merit 度量 $M=\frac12|F|^2$ 為框架，本文指出 PTC 方向由 $(J+\frac1{dt}I)dx_P=-F$ 所定義時，可能出現幾何對齊指標 $\mathcal{C}*{align}=\frac{\langle g,dx_P\rangle}{|g||dx_P|}>0$，即候選方向為上坡方向。此幾何失配可在 $LinErr=\frac{|A(dx_P)+F|}{|F|}$ 極小的條件下發生，顯示失效並非線性求解誤差，而為 globalization shift 在光譜跨零結構下所引發的方向旋轉。於嚴格接受條件 $M*{new}\le M_{old}(1+10^{-12})+10^{-15}$ 下，連續拒絕將導致 $dt$ 收縮至下限並形成 dt-stagnation。本文形式化幾何失配之充分條件並建立 dt-stagnation 的動力學模型，指出單純依賴步長調整無法消除此結構缺口。本文之分析框架可推廣至一般不定非線性系統之 globalization 設計，並為求解器治理提供理論基礎。
+
+關鍵詞（Keywords, en）：pseudo-transient continuation；globalization；indefinite operator；geometric misalignment；merit function；spectral analysis；dt-stagnation；nonlinear solver；acceptance rule
+
+關鍵詞（Keywords, zh-Hant）：偽暫態延拓；全域化；不定算子；幾何失配；merit function；光譜分析；dt-stagnation；非線性求解器；接受法律
+
+分類（Subjects）：65H10；65F10；65N30；15A18；35J60
+
+核心術語與符號（Core Terms and Notation）：
+
+1. 非線性系統：$F(u)=0$
+2. Jacobian：$J$
+3. Merit function：$M=\frac12|F|^2$
+4. 梯度：$g=\nabla M$
+5. Newton 方向：$Jdx_N=-F$
+6. PTC 方向：$(J+\frac1{dt}I)dx_P=-F$
+7. 幾何對齊指標：$\mathcal{C}_{align}=\frac{\langle g,dx\rangle}{|g||dx|}$
+8. 線性審計指標：$LinErr=\frac{|A(dx)+F|}{|F|}$
+9. 嚴格接受法律：$M_{new}\le M_{old}(1+10^{-12})+10^{-15}$
+10. 失效型態：dt-stagnation
+
+與 Paper A 的關係（Relation to Paper A）：本文為理論分析篇，聚焦於不定算子下 PTC shift 造成 $\mathcal{C}_{align}>0$ 與 dt-stagnation 的結構機制，並為治理協議提供形式化基礎；相對地，Paper A 著重於 A/B/C 對照實驗與治理機制之可運行證據鏈。
+
+程式與可重現性（Code and Reproducibility）：本文為理論分析，未引入新的實作或實驗流程；如需對照實驗證據與 reference implementation，請參見 Paper A 所述之 A/B/C 對照架構與輸出圖表設計。
+
+授權（License）：All rights reserved by the author unless explicitly stated otherwise.
+
+引用建議（Suggested Citation, en）：Shu Koun. Structural Analysis of Geometric Misalignment in Pseudo-Transient Continuation under Indefinite Operators. Version v1.0.0, 2026-02-13.
+
 
 ---
 
